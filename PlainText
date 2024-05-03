@@ -1,0 +1,14 @@
+# Read the data from the text file
+with open('GalaxyLocation.txt', 'r') as file:
+    raw_text = file.read()
+
+# Write the header and data to a new text file
+with open('GalaxyData.txt', 'w') as new_file:
+    # Write the header
+    new_file.write("# Galaxy Location Data\n")
+    new_file.write("# Columns: objid, specobjid, type, ra, dec, u, g, r, i, z, redshift\n")
+    new_file.write("\n")
+    
+    # Write the data
+    new_file.write(raw_text)
+
