@@ -1,0 +1,24 @@
+import csv
+
+input_file = 'GalaxyLocation.txt'
+output_file = 'Formatted_GalaxyLocation.txt'
+
+# Open input and output files
+with open(input_file, 'r') as f_in, open(output_file, 'w') as f_out:
+    # Skip the first line containing column headers
+    next(f_in)
+    
+    # Initialize CSV reader and writer
+    reader = csv.reader(f_in)
+    writer = csv.writer(f_out, delimiter='\t')
+    
+    # Write headers to the output file
+    writer.writerow(['objid', 'specobjid', 'type', 'ra', 'dec', 'u', 'g', 'r', 'i', 'z', 'redshift'])
+    
+    # Iterate over each row in the input file
+    for row in reader:
+        # Write row to output file with tab delimiter
+        writer.writerow(row)
+
+print("Formatting complete. Output saved to", output_file)
+

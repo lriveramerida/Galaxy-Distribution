@@ -1,0 +1,30 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the formatted text file into a pandas DataFrame
+data = pd.read_csv('Formatted_GalaxyLocation.txt', delimiter='\t', skiprows=1)
+
+# Generate a table from the DataFrame
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.axis('off')
+table = ax.table(cellText=data.values,
+         colLabels=data.columns,
+         loc='center',
+         cellLoc='center')
+
+# Bold headers
+# for (i, j), in cell in table.get_celld().items():
+#	if i == 0:
+#	      cell.set_text_props(fontweight='bold')
+
+# Increase text size
+table.auto_set_font_size(False)
+table.set_fontsize(12)
+
+# Adjust cell padding
+table.auto_set_column_width(col=list(range(len(data.columns))))
+
+# Save the table as an image
+plt.savefig('GalaxyLocation_Table.png')
+plt.show()
+

@@ -1,0 +1,27 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the data into a DataFrame
+data = pd.read_csv("GalaxyLocation.txt")
+
+# Plot histogram of redshift distribution
+plt.hist(data['redshift'], bins=20, color='skyblue', edgecolor='black')
+plt.xlabel('Redshift')
+plt.ylabel('Frequency')
+plt.title('Redshift Distribution of Galaxies')
+plt.grid(True)
+plt.show()
+
+# Plot magnitude-redshift relation
+plt.scatter(data['redshift'], data['u'], label='u band', alpha=0.5)
+plt.scatter(data['redshift'], data['g'], label='g band', alpha=0.5)
+plt.scatter(data['redshift'], data['r'], label='r band', alpha=0.5)
+plt.scatter(data['redshift'], data['i'], label='i band', alpha=0.5)
+plt.scatter(data['redshift'], data['z'], label='z band', alpha=0.5)
+plt.xlabel('Redshift')
+plt.ylabel('Magnitude')
+plt.title('Magnitude-Redshift Relation of Galaxies')
+plt.legend()
+plt.grid(True)
+plt.show()
+
