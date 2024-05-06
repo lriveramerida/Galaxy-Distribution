@@ -16,7 +16,9 @@ The dataset provided consists of the following columns:
 ## Analysis
 The analysis of the galaxy distribution data will include the following steps:
 
-1.  **Redshift Distribution Analysis**: Calculate the redshift distribution of galaxies and plot a histogram or density plot to visualize the distribution of redshift values. Analyze the distribution and look for any peaks or trends that may indicate clusters or other structures in the universe.
+1. Statistical Analysis Results: Compile the statistical analysis findings into a dedicated file for future reference and analysis.
+2. Galaxy Distribution Plot: Create a visualization depicting the spatial distribution of galaxies using Right Ascension (RA) and Declination (Dec) coordinates. Each data point on the plot represents a galaxy from the dataset, providing insights into their spatial arrangement across the celestial sphere.
+3. Color-Color Diagram (u-g vs g-r): Generate a color-color diagram illustrating the relationship between magnitudes in different photometric bands, such as u-g and g-r. This diagram offers insights into the spectral characteristics of galaxies, revealing trends and correlations between their observed colors.
 
 
 ## Conclusion
