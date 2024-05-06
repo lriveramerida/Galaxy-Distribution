@@ -1,0 +1,37 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load data from GalaxyLocation.txt into a NumPy array
+data = np.genfromtxt('GalaxyLocation.txt', dtype=None, delimiter=',', names=True, encoding=None)
+
+# Perform statistical analysis
+mean_u_magnitude = np.mean(data['u'])
+median_r_magnitude = np.median(data['r'])
+std_redshift = np.std(data['redshift'])
+
+# Write statistical analysis results to a file
+with open('statistical_analysis_results.txt', 'w') as f:
+    f.write(f"Mean u magnitude: {mean_u_magnitude}\n")
+    f.write(f"Median r magnitude: {median_r_magnitude}\n")
+    f.write(f"Standard deviation of redshift: {std_redshift}\n")
+
+# Plot Galaxy Distribution
+plt.figure(figsize=(8, 6))
+plt.scatter(data['ra'], data['dec'], s=5, c='blue', alpha=0.5)
+plt.xlabel('Right Ascension (RA)')
+plt.ylabel('Declination (Dec)')
+plt.title('Galaxy Distribution')
+plt.grid(True)
+plt.savefig('galaxy_distribution_plot.png')
+plt.close()
+
+# Color-Color Diagram (Example: u-g vs g-r)
+plt.figure(figsize=(8, 6))
+plt.scatter(data['u'] - data['g'], data['g'] - data['r'], s=5, c='red', alpha=0.5)
+plt.xlabel('u - g')
+plt.ylabel('g - r')
+plt.title('Color-Color Diagram: u-g vs g-r')
+plt.grid(True)
+plt.savefig('color_color_diagram.png')
+plt.close()
+

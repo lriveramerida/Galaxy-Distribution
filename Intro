@@ -1,0 +1,5 @@
+The study of galaxies and their spatial arrangement within the cosmos is fundamental to contemporary astronomy, providing crucial insights into the evolution and organization of the universe. The Sloan Digital Sky Survey (SDSS), renowned for its extensive mapping of the celestial sphere, provides a rich dataset for investigating the distribution and characteristics of galaxies.
+
+This project embarks on a comprehensive examination of galaxy distribution, drawing upon the vast data resources cataloged by the SDSS. Through analysis of parameters such as object type, coordinates, and magnitudes across diverse spectral bands, the objective is to unveil underlying patterns and structures inherent in the cosmic tapestry
+
+Central to this analysis is the exploration of the redshift distribution of galaxies, a key metric indicative of their relative distance and velocity with respect to Earth. Leveraging sophisticated visualization methods such as histograms and density plots, I aim to elucidate the  distribution of redshift values and identify potential clustering phenomena.
